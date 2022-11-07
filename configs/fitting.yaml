@@ -1,0 +1,51 @@
+# Data preprocessing
+cpu_limits:
+  lower: 0.1
+  higher: 0.9
+min_of_max_cpu: 0.6
+acceptable_throughtput_error_rate: 0.3
+throughput_classification_precision:
+  Recommendation: 28
+  Search: 8
+  ComposeReview: 4
+  ComposePost: 4
+  UserTimeline: 7
+  HomeTimeline: 6
+  A: 5
+  B: 5
+# Data training
+percentage_for_train: 0.9
+cutoff_fitting_accy_threshold: 0.7
+cutoff_range:
+  Search:
+    min: 40
+    max: 96
+    step: 8
+  Recommendation:
+    min: 140
+    max: 350
+    step: 28
+  ComposeReview:
+    min: 20
+    max: 80
+    step: 4
+  UserTimeline:
+    min: 14
+    max: 126
+    step: 7
+  ComposePost:
+    min: 8
+    max: 72
+    step: 4
+  HomeTimeline:
+    min: 12
+    max: 108
+    step: 6
+  A:
+    min: 0
+    max: 200
+    step: 5
+  B:
+    min: 0
+    max: 200
+    step: 5

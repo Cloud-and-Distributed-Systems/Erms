@@ -1,0 +1,52 @@
+# Data preprocessing
+cpu_limits:
+  # Remove data those CPU usage is less than 10% or higher than 90%
+  lower: 0.1
+  higher: 0.9
+# During the whole test, if a microservice's highest CPU usage
+# is less than 60%, we consider that this microservice is not
+# profiling will, so we will ignore it during fitting.
+min_of_max_cpu: 0.6
+# If the gap between real throughput and the expected throughput
+# is too large, we will give up these that data.
+acceptable_throughtput_error_rate: 0.3
+# Discrete data, better to set to the same value as
+# workload_config.services.{service}.throughput in {app}-testing.yaml
+throughput_classification_precision:
+  Recommendation: 28
+  Search: 8
+  ComposeReview: 4
+  ComposePost: 4
+  UserTimeline: 7
+  HomeTimeline: 6
+# Data training
+# 90% train set and 10% test set
+percentage_for_train: 0.9
+# Minimum acceptable cutoff point accuracy
+cutoff_fitting_accy_threshold: 0.7
+# Find cutoff point from {min} to {max}, the interval is {step}
+cutoff_range:
+  Search:
+    min: 40
+    max: 96
+    step: 8
+  Recommendation:
+    min: 140
+    max: 350
+    step: 28
+  ComposeReview:
+    min: 20
+    max: 80
+    step: 4
+  UserTimeline:
+    min: 14
+    max: 126
+    step: 7
+  ComposePost:
+    min: 8
+    max: 72
+    step: 4
+  HomeTimeline:
+    min: 12
+    max: 108
+    step: 6

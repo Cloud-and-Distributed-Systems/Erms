@@ -1,0 +1,19 @@
+services:
+- Search
+- Recommendation
+
+interferences:
+  # Units: core
+  cpu: 0.4
+  # Units: MiB
+  mem: 800
+
+# Units: requests per min
+workloads:
+  Recommendation: 140
+  Search: 60
+
+# Units: ms
+slas:
+  Recommendation: 40
+  Search: 400

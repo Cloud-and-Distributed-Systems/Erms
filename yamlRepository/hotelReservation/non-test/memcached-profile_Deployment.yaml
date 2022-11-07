@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: memcached-profile
+  name: memcached-profile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: memcached-profile
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.22.0 (955b78124)
+        sidecar.istio.io/statsInclusionPrefixes: cluster.outbound,cluster_manager,listener_manager,http_mixer_filter,tcp_mixer_filter,server,cluster.xds-grp,listener,connection_manager
+        sidecar.istio.io/statsInclusionRegexps: http.*
+      creationTimestamp: null
+      labels:
+        io.kompose.service: memcached-profile
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - k8s-bk-15
+                - k8s-bk-16
+                - k8s-bk-17
+                - k8s-bk-18
+      containers:
+      - env:
+        - name: MEMCACHED_CACHE_SIZE
+          value: '128'
+        - name: MEMCACHED_THREADS
+          value: '2'
+        image: k.harbor.siat.ac.cn/ms/memcached
+        imagePullPolicy: IfNotPresent
+        name: hotel-reserv-profile-mmc
+        ports:
+        - containerPort: 11211
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 100m
+      restartPolicy: Always
+status: {}

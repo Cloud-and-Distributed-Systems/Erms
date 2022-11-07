@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: review-storage-service
+    death-star-project: media-microsvc
+  name: review-storage-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: review-storage-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: review-storage-service
+        death-star-project: media-microsvc
+      name: review-storage-service
+    spec:
+      containers:
+      - command:
+        - ReviewStorageService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: review-storage-service
+      restartPolicy: Always

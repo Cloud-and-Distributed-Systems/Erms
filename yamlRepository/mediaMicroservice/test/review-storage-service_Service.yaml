@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app-name: review-storage-service
+    death-star-project: media-microsvc
+  name: review-storage-service
+  namespace: media-microsvc
+spec:
+  ports:
+  - port: 9090
+  selector:
+    app-name: review-storage-service
+    death-star-project: media-microsvc

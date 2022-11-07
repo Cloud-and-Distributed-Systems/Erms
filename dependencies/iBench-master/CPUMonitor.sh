@@ -1,0 +1,1 @@
+docker stats `docker ps | grep ibench | awk '{print $1}'`

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: rate-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /data/volumes/rate-pv
+    type: DirectoryOrCreate
+  storageClassName: rate-storage
+  volumeMode: Filesystem

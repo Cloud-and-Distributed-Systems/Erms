@@ -1,0 +1,95 @@
+# Recommendation: 170ms, 140
+# Search: 1700ms, 60
+# Login: 100ms, 160
+# R+S: 40/200, 280/60
+
+# UserTimeline: 550ms, 120 / 400ms
+# HomeTimeline: 924ms, 200 / 600ms
+# ComposePost: 580ms, 160
+
+# ComposeReview: 495ms, 80
+yaml_repo:
+  media-microsvc: yamlRepository/mediaMicroservice
+  social-network: yamlRepository/socialNetwork
+  hotel-reserv: yamlRepository/hotelReservation
+data_path:
+  social-network: AE/data_social-network
+  hotel-reserv: AE/data_hotel-reserv
+  media-microsvc: AE/data_media-microsvc
+scripts:
+  media-microsvc:
+    ComposeReview: wrk2/scripts/media-microservice/compose-review.lua
+  social-network: 
+    ComposePost: wrk2/scripts/social-network/compose-post.lua
+    HomeTimeline: wrk2/scripts/social-network/read-home-timeline.lua
+    UserTimeline: wrk2/scripts/social-network/read-user-timeline.lua
+  hotel-reserv:
+    Search: wrk2/scripts/hotel-reservation/search.lua
+    Recommendation: wrk2/scripts/hotel-reservation/recommendation.lua
+    Login: wrk2/scripts/hotel-reservation/login.lua
+jaeger_host:
+  media-microsvc: http://localhost:30093
+  social-network: http://localhost:30094
+  hotel-reserv: http://localhost:30095
+entry_point:
+  social-network: "nginx-web-server"
+  hotel-reserv: "frontend"
+  media-microsvc: "nginx"
+host:
+  media-microsvc: http://localhost:30092
+  social-network: http://localhost:30628
+  hotel-reserv: http://localhost:30096
+operations:
+  media-microsvc:
+    ComposeReview: /wrk2-api/review/compose
+  social-network: 
+    ComposePost: /wrk2-api/post/compose
+    HomeTimeline: /wrk2-api/home-timeline/read
+    UserTimeline: /wrk2-api/user-timeline/read
+  hotel-reserv:
+    Search: HTTP GET /hotels
+    Login: HTTP GET /user
+    Recommendation: HTTP GET /recommendations
+image:
+    media-microsvc: nicklin9907/erms:mediamicroservice-1.0
+    social-network: nicklin9907/erms:socialnetwork-1.1
+    hotel-reserv: nicklin9907/erms:hotelreservation-1.0
+nodes:
+- izj6c6vb9bfm8mxnvb4n47z
+- izj6c6vb9bfm8mxnvb4n46z
+- izj6c6vb9bfm8mxnvb4n45z
+pod_spec:
+  cpu_size: 0.1
+  mem_size: 200Mi
+namespace:
+  social-network: social-network
+  hotel-reserv: hotel-reserv
+  media-microsvc: media-microsvc
+
+interference:
+  - cpu:
+      cpu_size: 0.25
+      mem_size: 10Mi
+      allocation:
+        izj6c6vb9bfm8mxnvb4n47z:
+          idle: 4
+          busy: 2
+        izj6c6vb9bfm8mxnvb4n46z:
+          idle: 5
+          busy: 1
+        izj6c6vb9bfm8mxnvb4n45z:
+          idle: 3
+          busy: 3
+    mem:
+      cpu_size: 0.01
+      mem_size: 500Mi
+      allocation:
+        izj6c6vb9bfm8mxnvb4n47z:
+          idle: 3
+          busy: 3
+        izj6c6vb9bfm8mxnvb4n46z:
+          idle: 4
+          busy: 2
+        izj6c6vb9bfm8mxnvb4n45z:
+          idle: 5
+          busy: 1

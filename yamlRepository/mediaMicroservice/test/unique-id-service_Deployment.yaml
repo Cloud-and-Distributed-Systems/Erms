@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: unique-id-service
+    death-star-project: media-microsvc
+  name: unique-id-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: unique-id-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: unique-id-service
+        death-star-project: media-microsvc
+      name: unique-id-service
+    spec:
+      containers:
+      - command:
+        - UniqueIdService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: unique-id-service
+      restartPolicy: Always

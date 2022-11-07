@@ -1,0 +1,12 @@
+pandas==1.1.5
+aiohttp==3.8.1
+PyYAML==6.0
+xgboost==1.5.2
+python-box==6.0.2
+ipdb==0.13.9
+termcolor==1.1.0
+requests==2.27.1
+kubernetes==23.3.0
+sklearn==0.0
+matplotlib==3.3.4
+cvxpy==1.1.20

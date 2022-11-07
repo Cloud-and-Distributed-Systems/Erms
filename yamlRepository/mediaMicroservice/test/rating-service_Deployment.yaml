@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: rating-service
+    death-star-project: media-microsvc
+  name: rating-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: rating-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: rating-service
+        death-star-project: media-microsvc
+      name: rating-service
+    spec:
+      containers:
+      - command:
+        - RatingService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: rating-service
+      restartPolicy: Always

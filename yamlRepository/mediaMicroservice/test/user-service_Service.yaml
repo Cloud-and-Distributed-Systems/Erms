@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app-name: user-service
+    death-star-project: media-microsvc
+  name: user-service
+  namespace: media-microsvc
+spec:
+  ports:
+  - port: 9090
+  selector:
+    app-name: user-service
+    death-star-project: media-microsvc

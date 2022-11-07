@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app-name: nginx-web-server
+    death-star-project: media-microsvc
+  name: nginx-web-server
+  namespace: media-microsvc
+spec:
+  ports:
+  - nodePort: 30092
+    port: 8080
+    targetPort: 8080
+  selector:
+    app-name: nginx-web-server
+    death-star-project: media-microsvc
+  type: NodePort

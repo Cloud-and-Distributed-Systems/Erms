@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memoryinterference
+  labels:
+    app: memoryinterference
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memoryinterference
+  template:
+    metadata:
+      labels:
+        app: memoryinterference
+    spec:
+      containers:
+      - name: memoryinterference
+        image: k.harbor.siat.ac.cn/ms/ibench:v0.3
+        command: ["/ibench/src/memCap"]
+        args: ["60s 2 2s"]
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "0.1"
+          limits:
+            memory: "1Gi"
+            cpu: "0.1"

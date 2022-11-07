@@ -1,0 +1,82 @@
+cpu_interference: 4
+mem_interference: 8192
+
+slas:
+  ComposePost: 10000
+  UserTimeline: 10000
+  HomeTimeline: 10000
+  # Hotel
+  Login: 50000
+  Search: 50000
+  Reservation: 50000
+  Recommendation: 50000
+
+workloads:
+  # Social Network
+  ComposePost: 100
+  UserTimeline: 50
+  HomeTimeline: 200
+  # Hotel
+  Login: 105
+  Search: 20
+  Reservation: 30
+  Recommendation: 45
+
+partitions: 1
+
+services:
+# Hotel
+# - Login
+- Search
+# - Reservation
+# - Recommendation
+
+validation:
+  interference_config:
+    cpu:
+      cpu_size: 1
+      mem_size: 10Mi
+    mem:
+      cpu_size: 0.01
+      mem_size: 1Gi
+  workload_config:
+    wrk_path: dev/wrk
+    services:
+      Recommendation:
+        thread_num: 1
+        connection_num: 3
+        throughput: 3
+        script_path: wrk2/scripts/hotel-reservation/recommendation.lua
+        url: http://localhost:30096
+      Reservation:
+        thread_num: 1
+        connection_num: 3
+        throughput: 2
+        script_path: wrk2/scripts/hotel-reservation/reserve.lua
+        url: http://localhost:30096
+      Search:
+        thread_num: 1
+        connection_num: 1
+        throughput: 1
+        script_path: wrk2/scripts/hotel-reservation/search.lua
+        url: http://localhost:30096
+      Login:
+        thread_num: 1
+        connection_num: 3
+        throughput: 7
+        script_path: wrk2/scripts/hotel-reservation/login.lua
+        url: http://localhost:30096
+  collector_config:
+    # Social Network
+    # jaeger_host: http://localhost:30094
+    # entry_point: nginx-web-server
+
+    # Hotel Reservation
+    jaeger_host: http://localhost:30095
+    entry_point: frontend
+
+    # Media Microservice
+    # jaeger_host: http://localhost:30093
+    # entry_point: nginx
+    max_traces: 1000
+    monitor_interval: 1

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: interference
+spec:
+  selector:
+    matchLabels:
+      app: interference
+  template:
+    metadata:
+      labels:
+        app: interference
+    spec:
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+      containers:
+      - name: interference
+        image: nicklin9907/erms:ibench-1.0

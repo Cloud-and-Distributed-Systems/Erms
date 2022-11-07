@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: text-service
+    death-star-project: media-microsvc
+  name: text-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: text-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: text-service
+        death-star-project: media-microsvc
+      name: text-service
+    spec:
+      containers:
+      - command:
+        - TextService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: text-service
+      restartPolicy: Always

@@ -1,0 +1,33 @@
+pod_spec:
+  cpu_size: 0.1
+  mem_size: 200Mi
+
+nodes:
+- node_1
+- node_2
+- node_3
+
+parts: 2
+
+cluster_status:
+  - node: "node_1"
+    CPU_used: 0.5
+    mem_used: 1024
+    CPU_aloc: 1
+    mem_aloc: 2048
+    CPU_cap: 4
+    mem_cap: 8192
+  - node: "node_2"
+    CPU_used: 1
+    mem_used: 1024
+    CPU_aloc: 2
+    mem_aloc: 2048
+    CPU_cap: 4
+    mem_cap: 8192
+  - node: "node_3"
+    CPU_used: 1.5
+    mem_used: 512
+    CPU_aloc: 3
+    mem_aloc: 1024
+    CPU_cap: 4
+    mem_cap: 8192

@@ -1,0 +1,50 @@
+# Repeatation
+repeats: [0, 1, 2]
+# Testing duration of each repeat/service/inf/clients, units in Seconds
+duration: 40
+# Services that need to test
+services: 
+- Search
+interference_config:
+  # CPU workload
+  cpu:
+    # Should not exceed 1
+    cpu_size: 0.25
+    mem_size: 10Mi
+    # CPU workloads
+    # Final CPU usage = pod_range[i] * cpu_size
+    pod_range: [3, 4, 5, 6]
+  # Memory capacity workload
+  mem:
+    cpu_size: 0.01
+    mem_size: 500Mi
+    # Memory workloads
+    # Final Memory usage = pod_range[i] * mem_size
+    pod_range: [3, 4, 5, 6]
+workload_config:
+  # Where to find wrk executable file
+  wrk_path: wrk2/wrk
+  services:
+    # Service configuration
+    Reservation:
+      # The program will test from 1 to max_clients
+      max_clients: 20
+      # Each client's thread, -t flag in wrk program
+      thread_num: 1
+      # Each client's connections, -c flag in wrk program
+      connection_num: 1
+      # Each client's throughput, -R flag in wrk program
+      throughput: 1
+      # Testing script, -s flag in wrk program
+      script_path: wrk2/scripts/hotel-reservation/reserve.lua
+      # Request URL
+      url: http://localhost:30096
+collector_config:
+  # Jaeger address for this app
+  jaeger_host: http://localhost:30095
+  # Hotel: frontend, Media: nginx, Social: nginx-web-server
+  entry_point: frontend
+  # Jaeger max traces
+  max_traces: 1000
+  # Prometheus monitor interval
+  monitor_interval: 1

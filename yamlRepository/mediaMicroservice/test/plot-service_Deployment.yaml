@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: plot-service
+    death-star-project: media-microsvc
+  name: plot-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: plot-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: plot-service
+        death-star-project: media-microsvc
+      name: plot-service
+    spec:
+      containers:
+      - command:
+        - PlotService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: plot-service
+      restartPolicy: Always

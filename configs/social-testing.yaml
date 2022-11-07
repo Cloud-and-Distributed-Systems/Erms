@@ -1,0 +1,44 @@
+repeats: [0, 1, 2]
+duration: 40
+services: 
+- UserTimeline
+- HomeTimeline
+# - ComposePost
+interference_config:
+  cpu:
+    cpu_size: 0.4
+    mem_size: 10Mi
+    pod_range: [5, 6, 7, 8]
+  mem:
+    cpu_size: 0.01
+    mem_size: 800Mi
+    pod_range: [5, 6, 7, 8]
+workload_config:
+  wrk_path: wrk2/wrk
+  services:
+    UserTimeline:
+      max_clients: 20
+      thread_num: 2
+      connection_num: 4
+      throughput: 7
+      script_path: wrk2/scripts/social-network/read-user-timeline.lua
+      url: http://localhost:30628
+    ComposePost:
+      max_clients: 20
+      thread_num: 1
+      connection_num: 2
+      throughput: 3
+      script_path: wrk2/scripts/social-network/compose-post.lua
+      url: http://localhost:30628
+    HomeTimeline:
+      max_clients: 20
+      thread_num: 2
+      connection_num: 3
+      throughput: 6
+      script_path: wrk2/scripts/social-network/read-home-timeline.lua
+      url: http://localhost:30628
+collector_config:
+  jaeger_host: http://localhost:30094
+  entry_point: nginx-web-server
+  max_traces: 1000
+  monitor_interval: 1

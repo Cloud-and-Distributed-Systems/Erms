@@ -1,0 +1,37 @@
+# Path to load/save profiling data/scaling result/scheduling/result
+data_path: data_example
+# Path to save figures
+figure_path: data_example/figures
+# Path to all yaml files
+yaml_repo_path: yamlRepository/example
+# Which namespace should app deployed at
+namespace: example
+# The docker image that used to create stateless pods
+# Since DeathStarBench has changed a lot in recent years,
+# we provied a stable image version on DockerHub.
+app_img: nicklin9907/erms:example
+# Nodes that used to deploy stateless pods
+nodes_for_test:
+- example_node_1
+- example_node_2
+# Cluster's prometheus address
+prometheus_host: http://localhost:30090
+# Nodes that used to deploy infrastructure pods
+nodes_for_infra:
+- example_node_3
+# Pod resource limits
+pod_spec:
+  cpu_size: 0.1
+  mem_size: 200Mi
+
+# Different replicas for difference service
+# Trying to average the resource usage of all pods
+replicas:
+  Search:
+    frontend: 6
+    reservation: 3
+    search: 2
+  Recommendation:
+    frontend: 8
+    profile: 5
+    recommendation: 2

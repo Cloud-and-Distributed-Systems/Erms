@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: movie-id-service
+    death-star-project: media-microsvc
+  name: movie-id-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: movie-id-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: movie-id-service
+        death-star-project: media-microsvc
+      name: movie-id-service
+    spec:
+      containers:
+      - command:
+        - MovieIdService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: movie-id-service
+      restartPolicy: Always

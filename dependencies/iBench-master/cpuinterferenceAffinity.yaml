@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpuinterference
+  labels:
+    app: cpuinterference
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpuinterference
+  template:
+    metadata:
+      labels:
+        app: cpuinterference
+        node: k8s-bk-3
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - k8s-bk-3
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+      containers:
+      - name: cpuinterference
+        image: ibench:v0.1
+        command: ["/ibench/src/cpu"]    
+        args: ["60s"]
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "0.1"
+          limits:
+            memory: "1Gi"
+            cpu: "0.1"

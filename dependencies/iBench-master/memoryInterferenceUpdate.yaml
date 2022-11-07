@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels: {app: memoryinterference}
+  name: memoryinterference4
+spec:
+  replicas: 20
+  selector:
+    matchLabels: {app: memoryinterference}
+  template:
+    metadata:
+      labels: {app: memoryinterference, node: k8s-bk-4}
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values: [k8s-bk-4]
+      containers:
+      - args: [120s, '2', 100000s]
+        command: [/ibench/src/memCap]
+        image: ibench:v0.5
+        name: memoryinterference
+        resources:
+          limits: {cpu: 0.1, memory: 1Gi}
+          requests: {cpu: 0.1, memory: 1Gi}
+      tolerations:
+      - {effect: NoSchedule, key: node-role.kubernetes.io/master, operator: Exists}

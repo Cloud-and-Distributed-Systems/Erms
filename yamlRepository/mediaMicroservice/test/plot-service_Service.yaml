@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app-name: plot-service
+    death-star-project: media-microsvc
+  name: plot-service
+  namespace: media-microsvc
+spec:
+  ports:
+  - port: 9090
+  selector:
+    app-name: plot-service
+    death-star-project: media-microsvc

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: cast-info-service
+    death-star-project: media-microsvc
+  name: cast-info-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: cast-info-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: cast-info-service
+        death-star-project: media-microsvc
+      name: cast-info-service
+    spec:
+      containers:
+      - command:
+        - CastInfoService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: cast-info-service
+      restartPolicy: Always

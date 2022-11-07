@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: recommendation-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /data/volumes/recommendation-pv
+    type: DirectoryOrCreate
+  storageClassName: recommendation-storage
+  volumeMode: Filesystem

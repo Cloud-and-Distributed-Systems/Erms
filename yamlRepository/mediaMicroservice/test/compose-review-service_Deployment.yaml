@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: compose-review-service
+    death-star-project: media-microsvc
+  name: compose-review-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: compose-review-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: compose-review-service
+        death-star-project: media-microsvc
+      name: compose-review-service
+    spec:
+      containers:
+      - command:
+        - ComposeReviewService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: compose-review-service
+      restartPolicy: Always

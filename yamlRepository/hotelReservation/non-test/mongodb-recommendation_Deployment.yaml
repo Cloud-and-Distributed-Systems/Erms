@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mongodb-recommendation
+  name: mongodb-recommendation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mongodb-recommendation
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.22.0 (955b78124)
+        sidecar.istio.io/statsInclusionPrefixes: cluster.outbound,cluster_manager,listener_manager,http_mixer_filter,tcp_mixer_filter,server,cluster.xds-grp,listener,connection_manager
+        sidecar.istio.io/statsInclusionRegexps: http.*
+      creationTimestamp: null
+      labels:
+        io.kompose.service: mongodb-recommendation
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - k8s-bk-15
+                - k8s-bk-16
+                - k8s-bk-17
+                - k8s-bk-18
+      containers:
+      - image: k.harbor.siat.ac.cn/ms/mongo
+        imagePullPolicy: IfNotPresent
+        name: hotel-reserv-recommendation-mongo
+        ports:
+        - containerPort: 27017
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 100m
+        volumeMounts:
+        - mountPath: /data/db
+          name: recommendation
+      hostname: recommendation-db
+      restartPolicy: Always
+      volumes:
+      - name: recommendation
+        persistentVolumeClaim:
+          claimName: recommendation-pvc
+status: {}

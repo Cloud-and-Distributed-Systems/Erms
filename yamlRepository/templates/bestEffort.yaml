@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: besteffort
+spec:
+  selector:
+    matchLabels:
+      app: besteffort
+  template:
+    metadata:
+      labels:
+        app: besteffort
+    spec:
+      containers:
+      - name: besteffort
+        image: busybox
+        command:
+          - sleep
+          - "36000"
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always

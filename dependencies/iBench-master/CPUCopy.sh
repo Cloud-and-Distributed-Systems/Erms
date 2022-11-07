@@ -1,0 +1,1 @@
+docker cp src/$1 `docker ps | grep ibench | awk '{print $1}'`:/ibench/src/

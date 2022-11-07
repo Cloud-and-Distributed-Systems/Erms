@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: profile-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /data/volumes/profile-pv
+    type: DirectoryOrCreate
+  storageClassName: profile-storage
+  volumeMode: Filesystem

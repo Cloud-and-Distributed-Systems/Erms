@@ -1,0 +1,41 @@
+data_path: Sep17_data_social
+figure_path: Sep17_data_social/figures
+yaml_repo_path: yamlRepository/socialNetwork
+namespace: social-network
+app_img: nicklin9907/erms:socialnetwork-1.1
+nodes_for_test:
+- izj6c6vb9bfm8mxnvb4n44z
+- izj6c6vb9bfm8mxnvb4n45z
+- izj6c6vb9bfm8mxnvb4n46z
+- izj6c6vb9bfm8mxnvb4n47z
+prometheus_host: http://localhost:30090
+nodes_for_infra:
+- izj6c4ghaaduar69lb5hlsz
+pod_spec:
+  cpu_size: 0.1
+  mem_size: 200Mi
+
+replicas:
+  ComposeReview:
+    nginx-web-server: 10
+    compose-review-service: 3
+    movie-id-service: 2
+  Search:
+    frontend: 6
+    reservation: 3
+    search: 2
+  Recommendation:
+    frontend: 8
+    profile: 5
+    recommendation: 2
+  ComposePost:
+    nginx-thrift: 30
+    compose-post-service: 3
+    text-service: 1
+  UserTimeline:
+    nginx-thrift: 30
+    user-timeline-service: 2
+    post-storage-service: 6
+  HomeTimeline:
+    nginx-thrift: 30
+    post-storage-service: 3

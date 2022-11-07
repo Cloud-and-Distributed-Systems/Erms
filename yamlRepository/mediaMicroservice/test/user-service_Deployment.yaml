@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: user-service
+    death-star-project: media-microsvc
+  name: user-service
+  namespace: media-microsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: user-service
+      death-star-project: media-microsvc
+  template:
+    metadata:
+      labels:
+        app-name: user-service
+        death-star-project: media-microsvc
+      name: user-service
+    spec:
+      containers:
+      - command:
+        - UserService
+        image: APP_IMG
+        imagePullPolicy: IfNotPresent
+        name: user-service
+      restartPolicy: Always

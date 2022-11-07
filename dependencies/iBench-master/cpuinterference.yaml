@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpuinterference
+  labels:
+    app: cpuinterference
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpuinterference
+  template:
+    metadata:
+      labels:
+        app: cpuinterference
+    spec:
+      containers:
+      - name: cpuinterference
+        image: k.harbor.siat.ac.cn/ms/ibench:v0.3
+        command: ["/ibench/src/cpu"]    
+        args: ["60s"]
+        resources:
+          requests:
+            memory: "0.1Gi"
+            cpu: "1"
+          limits:
+            memory: "0.1Gi"
+            cpu: "1"

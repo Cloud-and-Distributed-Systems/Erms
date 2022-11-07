@@ -1,0 +1,28 @@
+repeats: [0, 1, 2]
+duration: 40
+services: 
+- ComposeReview
+interference_config:
+  cpu:
+    cpu_size: 0.3
+    mem_size: 10Mi
+    pod_range: [5, 6, 7, 8]
+  mem:
+    cpu_size: 0.01
+    mem_size: 800Mi
+    pod_range: [5, 6, 7, 8]
+workload_config:
+  wrk_path: wrk2/wrk
+  services:
+    ComposeReview:
+      max_clients: 20
+      thread_num: 1
+      connection_num: 2
+      throughput: 4
+      script_path: wrk2/scripts/media-microservice/compose-review.lua
+      url: http://localhost:30092
+collector_config:
+  jaeger_host: http://localhost:30093
+  entry_point: nginx
+  max_traces: 1000
+  monitor_interval: 1
