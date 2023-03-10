@@ -39,7 +39,7 @@ spec:
                 - k8s-bk-17
                 - k8s-bk-18
       containers:
-      - image: k.harbor.siat.ac.cn/ms/mongo
+      - image: nicklin9907/erms:mongo
         imagePullPolicy: IfNotPresent
         name: hotel-reserv-rate-mongo
         ports:

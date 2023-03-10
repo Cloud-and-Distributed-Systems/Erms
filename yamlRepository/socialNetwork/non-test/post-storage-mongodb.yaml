@@ -37,6 +37,6 @@ spec:
     spec:
       containers:
       - name: post-storage-mongodb
-        image: k.harbor.siat.ac.cn/ms/mongo
+        image: nicklin9907/erms:mongo
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
