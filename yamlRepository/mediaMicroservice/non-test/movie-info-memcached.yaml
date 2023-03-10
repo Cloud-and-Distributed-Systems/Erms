@@ -1,4 +1,3 @@
----
 apiVersion: v1
 kind: Service
 metadata:
@@ -37,5 +36,5 @@ spec:
     spec:
       containers:
       - name: movie-info-memcached
-        image: k.harbor.siat.ac.cn/ms/memcached
+        image: nicklin9907/erms:memcached
       restartPolicy: Always

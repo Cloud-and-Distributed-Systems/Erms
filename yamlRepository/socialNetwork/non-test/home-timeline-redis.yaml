@@ -37,6 +37,6 @@ spec:
     spec:
       containers:
       - name: home-timeline-redis
-        image: k.harbor.siat.ac.cn/ms/redis
+        image: nicklin9907/erms:redis
         imagePullPolicy: IfNotPresent
       restartPolicy: Always

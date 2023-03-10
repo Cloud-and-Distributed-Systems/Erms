@@ -37,6 +37,6 @@ spec:
     spec:
       containers:
       - name: media-memcached
-        image: k.harbor.siat.ac.cn/ms/memcached
+        image: nicklin9907/erms:memcached
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
