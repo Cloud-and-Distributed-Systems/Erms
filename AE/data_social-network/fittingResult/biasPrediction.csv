@@ -1,0 +1,16 @@
+tag,accy,modelFile
+ComposePost_compose-post-service,0.6543054280431079,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_compose-post-service.DT
+ComposePost_nginx-web-server,-0.5542470707677203,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_nginx-web-server.DT
+ComposePost_post-storage-service,1.0,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_post-storage-service.DT
+ComposePost_social-graph-service,0.9048177909011587,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_social-graph-service.DT
+ComposePost_text-service,0.9245690771025364,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_text-service.DT
+ComposePost_url-shorten-service,0.8793886258778801,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_url-shorten-service.DT
+ComposePost_user-mention-service,0.9758466784934532,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_user-mention-service.DT
+ComposePost_user-timeline-service,0.6104044655506479,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_user-timeline-service.DT
+ComposePost_write-home-timeline-service,0.8901751668925281,AE/data_social-network/fittingResult/models/biasPrediction/ComposePost_write-home-timeline-service.DT
+HomeTimeline_home-timeline-service,0.9061781215525344,AE/data_social-network/fittingResult/models/biasPrediction/HomeTimeline_home-timeline-service.DT
+HomeTimeline_nginx-web-server,0.8255536689254206,AE/data_social-network/fittingResult/models/biasPrediction/HomeTimeline_nginx-web-server.DT
+HomeTimeline_post-storage-service,0.8337356685725417,AE/data_social-network/fittingResult/models/biasPrediction/HomeTimeline_post-storage-service.DT
+UserTimeline_nginx-web-server,0.3897596883842414,AE/data_social-network/fittingResult/models/biasPrediction/UserTimeline_nginx-web-server.DT
+UserTimeline_post-storage-service,0.32701279401579675,AE/data_social-network/fittingResult/models/biasPrediction/UserTimeline_post-storage-service.DT
+UserTimeline_user-timeline-service,0.9031897023913749,AE/data_social-network/fittingResult/models/biasPrediction/UserTimeline_user-timeline-service.DT

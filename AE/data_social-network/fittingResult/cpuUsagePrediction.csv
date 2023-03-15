@@ -1,0 +1,16 @@
+service,microservice,accy,modelFile
+ComposePost,compose-post-service,0.9459474948620202,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_compose-post-service.cpu
+ComposePost,nginx-web-server,0.9411777853476727,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_nginx-web-server.cpu
+ComposePost,post-storage-service,0.9629717761909535,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_post-storage-service.cpu
+ComposePost,social-graph-service,0.9501817404230752,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_social-graph-service.cpu
+ComposePost,text-service,0.9576994701040221,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_text-service.cpu
+ComposePost,url-shorten-service,0.9684072308959816,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_url-shorten-service.cpu
+ComposePost,user-mention-service,0.9314425510232398,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_user-mention-service.cpu
+ComposePost,user-timeline-service,0.937820558622554,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_user-timeline-service.cpu
+ComposePost,write-home-timeline-service,0.8299862002781404,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_write-home-timeline-service.cpu
+HomeTimeline,home-timeline-service,0.9605372206874555,AE/data_social-network/fittingResult/models/usagePrediction/HomeTimeline_home-timeline-service.cpu
+HomeTimeline,nginx-web-server,0.9315867726284114,AE/data_social-network/fittingResult/models/usagePrediction/HomeTimeline_nginx-web-server.cpu
+HomeTimeline,post-storage-service,0.9563168912810723,AE/data_social-network/fittingResult/models/usagePrediction/HomeTimeline_post-storage-service.cpu
+UserTimeline,nginx-web-server,0.9333479486114094,AE/data_social-network/fittingResult/models/usagePrediction/UserTimeline_nginx-web-server.cpu
+UserTimeline,post-storage-service,0.9229840249297425,AE/data_social-network/fittingResult/models/usagePrediction/UserTimeline_post-storage-service.cpu
+UserTimeline,user-timeline-service,0.9666488047056514,AE/data_social-network/fittingResult/models/usagePrediction/UserTimeline_user-timeline-service.cpu

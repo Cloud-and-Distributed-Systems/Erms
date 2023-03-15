@@ -1,0 +1,17 @@
+parentMS,childMS,parentOperation,childOperation,tag,service,step
+frontend,frontend,HTTP GET /recommendations,/recommendation.Recommendation/GetRecommendations,1,Recommendation,1
+frontend,recommendation,/recommendation.Recommendation/GetRecommendations,/recommendation.Recommendation/GetRecommendations,1.1,Recommendation,1
+frontend,frontend,HTTP GET /recommendations,/profile.Profile/GetProfiles,2,Recommendation,2
+frontend,profile,/profile.Profile/GetProfiles,/profile.Profile/GetProfiles,2.1,Recommendation,1
+frontend,frontend,HTTP GET /hotels,/search.Search/Nearby,1,Search,1
+frontend,search,/search.Search/Nearby,/search.Search/Nearby,1.1,Search,1
+search,search,/search.Search/Nearby,/geo.Geo/Nearby,1.1.1,Search,1
+search,geo,/geo.Geo/Nearby,/geo.Geo/Nearby,1.1.1.1,Search,1
+search,search,/search.Search/Nearby,/rate.Rate/GetRates,1.1.2,Search,2
+search,rate,/rate.Rate/GetRates,/rate.Rate/GetRates,1.1.2.1,Search,1
+frontend,frontend,HTTP GET /hotels,/reservation.Reservation/CheckAvailability,2,Search,2
+frontend,reservation,/reservation.Reservation/CheckAvailability,/reservation.Reservation/CheckAvailability,2.1,Search,1
+frontend,frontend,HTTP GET /hotels,/profile.Profile/GetProfiles,3,Search,3
+frontend,profile,/profile.Profile/GetProfiles,/profile.Profile/GetProfiles,3.1,Search,1
+
+

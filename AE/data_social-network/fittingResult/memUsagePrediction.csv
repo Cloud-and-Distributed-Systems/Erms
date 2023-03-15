@@ -1,0 +1,16 @@
+service,microservice,accy,modelFile
+ComposePost,compose-post-service,0.9519175210510427,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_compose-post-service.mem
+ComposePost,nginx-web-server,0.9109230788506315,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_nginx-web-server.mem
+ComposePost,post-storage-service,0.9725755271629057,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_post-storage-service.mem
+ComposePost,social-graph-service,0.9102450772688869,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_social-graph-service.mem
+ComposePost,text-service,0.9737618872434051,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_text-service.mem
+ComposePost,url-shorten-service,0.978716539757242,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_url-shorten-service.mem
+ComposePost,user-mention-service,0.9800370879497666,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_user-mention-service.mem
+ComposePost,user-timeline-service,0.9095010770373471,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_user-timeline-service.mem
+ComposePost,write-home-timeline-service,0.9599254585061865,AE/data_social-network/fittingResult/models/usagePrediction/ComposePost_write-home-timeline-service.mem
+HomeTimeline,home-timeline-service,0.9677897552104764,AE/data_social-network/fittingResult/models/usagePrediction/HomeTimeline_home-timeline-service.mem
+HomeTimeline,nginx-web-server,0.9609740574552061,AE/data_social-network/fittingResult/models/usagePrediction/HomeTimeline_nginx-web-server.mem
+HomeTimeline,post-storage-service,0.9370974604116151,AE/data_social-network/fittingResult/models/usagePrediction/HomeTimeline_post-storage-service.mem
+UserTimeline,nginx-web-server,0.9453423344071684,AE/data_social-network/fittingResult/models/usagePrediction/UserTimeline_nginx-web-server.mem
+UserTimeline,post-storage-service,0.9660727099081321,AE/data_social-network/fittingResult/models/usagePrediction/UserTimeline_post-storage-service.mem
+UserTimeline,user-timeline-service,0.9615547522379397,AE/data_social-network/fittingResult/models/usagePrediction/UserTimeline_user-timeline-service.mem

@@ -1,0 +1,11 @@
+tag,accy,modelFile
+ComposeReview_compose-review-service,0.9869540714525835,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_compose-review-service.DT
+ComposeReview_movie-id-service,0.8609931147940544,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_movie-id-service.DT
+ComposeReview_movie-review-service,-52.93087504364525,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_movie-review-service.DT
+ComposeReview_nginx,-27.424563494176518,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_nginx.DT
+ComposeReview_rating-service,0.8189781643353621,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_rating-service.DT
+ComposeReview_review-storage-service,0.9288327469269487,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_review-storage-service.DT
+ComposeReview_text-service,0.25557952225690755,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_text-service.DT
+ComposeReview_unique-id-service,0.9027773818257898,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_unique-id-service.DT
+ComposeReview_user-review-service,0.7605881998437323,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_user-review-service.DT
+ComposeReview_user-service,0.9083214255155474,AE/data_media-microsvc/fittingResult/models/biasPrediction/ComposeReview_user-service.DT

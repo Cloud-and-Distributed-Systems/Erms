@@ -1,0 +1,10 @@
+tag,accy,modelFile
+Recommendation_frontend,0.9838778409090909,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Recommendation_frontend.DT
+Recommendation_profile,0.9999999999999998,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Recommendation_profile.DT
+Recommendation_recommendation,0.9529198232323233,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Recommendation_recommendation.DT
+Search_frontend,0.975094696969697,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Search_frontend.DT
+Search_geo,0.9425223214285714,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Search_geo.DT
+Search_profile,0.9546085858585858,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Search_profile.DT
+Search_rate,0.970028409090909,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Search_rate.DT
+Search_reservation,0.9416982323232324,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Search_reservation.DT
+Search_search,0.9616815476190476,AE/data_hotel-reserv/fittingResult/models/inflectionPrediction/Search_search.DT

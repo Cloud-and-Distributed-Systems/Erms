@@ -1,0 +1,10 @@
+service,microservice,accy,modelFile
+Recommendation,frontend,0.9728699320297582,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Recommendation_frontend.mem
+Recommendation,profile,0.9822207161059986,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Recommendation_profile.mem
+Recommendation,recommendation,0.9681296161254329,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Recommendation_recommendation.mem
+Search,frontend,0.8751284766767374,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Search_frontend.mem
+Search,geo,0.9809197260404203,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Search_geo.mem
+Search,profile,0.9842459683292546,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Search_profile.mem
+Search,rate,0.9792506660065712,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Search_rate.mem
+Search,reservation,0.989191987927815,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Search_reservation.mem
+Search,search,0.9719848258712238,AE/data_hotel-reserv/fittingResult/models/usagePrediction/Search_search.mem

@@ -1,0 +1,10 @@
+tag,accy,modelFile
+Recommendation_frontend,0.9775507062273007,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Recommendation_frontend.DT
+Recommendation_profile,0.9311565582567989,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Recommendation_profile.DT
+Recommendation_recommendation,0.9588026214408826,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Recommendation_recommendation.DT
+Search_frontend,0.9285223003634615,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Search_frontend.DT
+Search_geo,0.8076713238482249,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Search_geo.DT
+Search_profile,0.25136588377801794,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Search_profile.DT
+Search_rate,1.0,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Search_rate.DT
+Search_reservation,0.852187839745969,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Search_reservation.DT
+Search_search,0.9512199293384911,AE/data_hotel-reserv/fittingResult/models/biasPrediction/Search_search.DT

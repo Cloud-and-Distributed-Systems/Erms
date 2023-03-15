@@ -1,0 +1,11 @@
+service,microservice,accy,modelFile
+ComposeReview,compose-review-service,0.9537564088980774,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_compose-review-service.cpu
+ComposeReview,movie-id-service,0.9340034043244256,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_movie-id-service.cpu
+ComposeReview,movie-review-service,0.8916784982002204,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_movie-review-service.cpu
+ComposeReview,nginx,0.9383820384953662,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_nginx.cpu
+ComposeReview,rating-service,0.9422207299884844,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_rating-service.cpu
+ComposeReview,review-storage-service,0.954681665817324,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_review-storage-service.cpu
+ComposeReview,text-service,0.9515211442946656,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_text-service.cpu
+ComposeReview,unique-id-service,0.9620014456521724,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_unique-id-service.cpu
+ComposeReview,user-review-service,0.8845591309516958,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_user-review-service.cpu
+ComposeReview,user-service,0.9604448664828945,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_user-service.cpu

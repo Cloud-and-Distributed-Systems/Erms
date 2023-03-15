@@ -1,0 +1,16 @@
+tag,accy,modelFile
+ComposePost_compose-post-service,0.8781919979530274,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_compose-post-service.DT
+ComposePost_nginx-web-server,0.9726623376623378,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_nginx-web-server.DT
+ComposePost_post-storage-service,1.0,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_post-storage-service.DT
+ComposePost_social-graph-service,0.8818523116317234,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_social-graph-service.DT
+ComposePost_text-service,0.9062302714646465,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_text-service.DT
+ComposePost_url-shorten-service,0.8953114942315311,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_url-shorten-service.DT
+ComposePost_user-mention-service,0.9375677733214499,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_user-mention-service.DT
+ComposePost_user-timeline-service,0.9019115790255497,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_user-timeline-service.DT
+ComposePost_write-home-timeline-service,0.9020334696205045,AE/data_social-network/fittingResult/models/inflectionPrediction/ComposePost_write-home-timeline-service.DT
+HomeTimeline_home-timeline-service,0.9745856676003734,AE/data_social-network/fittingResult/models/inflectionPrediction/HomeTimeline_home-timeline-service.DT
+HomeTimeline_nginx-web-server,0.8495343912623325,AE/data_social-network/fittingResult/models/inflectionPrediction/HomeTimeline_nginx-web-server.DT
+HomeTimeline_post-storage-service,0.9848164034132173,AE/data_social-network/fittingResult/models/inflectionPrediction/HomeTimeline_post-storage-service.DT
+UserTimeline_nginx-web-server,0.5267714345839347,AE/data_social-network/fittingResult/models/inflectionPrediction/UserTimeline_nginx-web-server.DT
+UserTimeline_post-storage-service,0.8979643812977146,AE/data_social-network/fittingResult/models/inflectionPrediction/UserTimeline_post-storage-service.DT
+UserTimeline_user-timeline-service,0.8868433007321896,AE/data_social-network/fittingResult/models/inflectionPrediction/UserTimeline_user-timeline-service.DT

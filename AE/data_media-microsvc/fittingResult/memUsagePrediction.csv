@@ -1,0 +1,11 @@
+service,microservice,accy,modelFile
+ComposeReview,compose-review-service,0.9668271293283071,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_compose-review-service.mem
+ComposeReview,movie-id-service,0.9625721025502201,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_movie-id-service.mem
+ComposeReview,movie-review-service,0.7756145834703321,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_movie-review-service.mem
+ComposeReview,nginx,0.9748547923076314,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_nginx.mem
+ComposeReview,rating-service,0.955475083078802,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_rating-service.mem
+ComposeReview,review-storage-service,0.9754504972583956,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_review-storage-service.mem
+ComposeReview,text-service,0.9666115018289831,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_text-service.mem
+ComposeReview,unique-id-service,0.8018349542406824,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_unique-id-service.mem
+ComposeReview,user-review-service,0.8481715190985339,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_user-review-service.mem
+ComposeReview,user-service,0.9697310827157769,AE/data_media-microsvc/fittingResult/models/usagePrediction/ComposeReview_user-service.mem
