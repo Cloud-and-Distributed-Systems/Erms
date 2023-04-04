@@ -17,7 +17,7 @@ We deploy Erms on top of a Kubernetes (k8s) cluster and use Jaeger and Prometheu
 
   * Help messages can be printed by `bash scripts/AE/${target_script}.sh -h`
 
-* We provide the extimated execution time for each script if necessary. Users could organize their schedule accordingly.
+* We provide the estimated execution time for each script if necessary. Users could organize their schedule accordingly.
 * Since some scripts take a long time, please build a screen: `screen -S session_name` , to maintain a long-live ssh connection.
 * If it fails when running the script, users **SHOULD** delete the result directory if exist and run the script again.
 * If the status of a worker node becomes NoReady, users could reboot the node to recover the Kubernetes cluster.
@@ -27,7 +27,8 @@ We deploy Erms on top of a Kubernetes (k8s) cluster and use Jaeger and Prometheu
 We assume that you already have a kubernetes cluster that meets the following requirements.
 * there are at least 4 nodes in the cluster, a master node and 3 slave nodes.
 * each slave node has at least 4 CPUs and 8 GB RAM.
-* the cluster contains Prometheus
+* the cluster contains Prometheus.
+* copy and unzip `additionalFiles/*.zip` under `/root` on all slave nodes.
 In addition, you should have some knowledge of [DeathStarBench](https://github.com/delimitrou/DeathStarBench/tree/master/mediaMicroservices) and understand the pre-requisites requirement to deploy it.
 
 In order to test Erms, you firstly need to modify the configuration in `configs/*-global.yaml` according to your environment. Usually, the most important configurations are:

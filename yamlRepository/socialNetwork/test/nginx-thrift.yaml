@@ -58,21 +58,21 @@ spec:
       volumes:
       - name: lua-scripts
         hostPath: 
-          path: /root/firm/benchmarks/1-social-network/nginx-web-server/lua-scripts-k8s
+          path: /root/social/lua-scripts-k8s
           type: Directory
       - name: pages
         hostPath: 
-          path: /root/firm/benchmarks/1-social-network/nginx-web-server/pages
+          path: /root/social/pages
           type: Directory
       - name: nginx-conf
         hostPath: 
-          path: /root/firm/benchmarks/1-social-network/nginx-web-server/conf/nginx-k8s.conf
+          path: /root/social/nginx-k8s.conf
           type: File
       - name: jaeger-config-json
         hostPath: 
-          path: /root/firm/benchmarks/1-social-network/nginx-web-server/jaeger-config.json
+          path: /root/social/jaeger-config.json
           type: File
       - name: gen-lua
         hostPath: 
-          path: /root/firm/benchmarks/1-social-network/gen-lua
+          path: /root/social/gen-lua
           type: Directory
