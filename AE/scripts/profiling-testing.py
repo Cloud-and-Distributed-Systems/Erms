@@ -263,8 +263,8 @@ if __name__ == "__main__":
                             "repeat": repeat,
                             "start_time": startTime,
                             "service": svc,
-                            "cpu_inter": cpuInstance * 0.25,
-                            "mem_inter": memoryInstance * 500,
+                            "cpu_inter": cpuInstance * 0.4,
+                            "mem_inter": memoryInstance * 800,
                             "target_throughput": clientNum
                             * currentWorkloadConfig["throughput"],
                             "test_name": testName,
