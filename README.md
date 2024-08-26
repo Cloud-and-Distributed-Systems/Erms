@@ -71,7 +71,7 @@ Notes: The generated file `spanRelationships.csv` needs to add one more column c
 
 ![Screenshot from Jaeger](https://github.com/user-attachments/assets/601589f7-c87f-4197-add8-5f5244b88315)
 
-You can refer to #11 for more information.
+You can refer to [#11](https://github.com/Cloud-and-Distributed-Systems/Erms/issues/11) for more information.
 
 
 
