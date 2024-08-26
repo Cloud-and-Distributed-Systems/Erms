@@ -67,6 +67,13 @@ Erms use pair-wised linear functions to profile microservices performance. The p
 
   ![ProfilingFitting](./doc/img/profiling-fitting.png)
 
+Notes: The generated file `spanRelationships.csv` needs to add one more column called `step` manuaully. It is used to distinguish between sequential and parallel invokes. For all invokes that belong to the same parent, if they have the same `step`, they will be treated as **parallel invokes**; otherwise, they will be considered **sequential invokes**. A simple example is provided below: 
+
+![Screenshot from Jaeger](https://github.com/user-attachments/assets/601589f7-c87f-4197-add8-5f5244b88315)
+
+You can refer to #11 for more information.
+
+
 
 ### Online Scaling
 
