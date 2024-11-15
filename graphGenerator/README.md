@@ -1,6 +1,6 @@
 # Microservice Graph Generator
 
-This microservice graph generator simulates a hierarchical structure of microservices based on probability distributions from input CSV files. It generates a graph-like structure where each node represents a microservice call, and each edge represents an invocation from one microservice to another.
+This microservice graph generator simulates a hierarchical structure of microservices based on probability distributions from input CSV files. It generates a graph-like structure where each node represents a microservice, and each edge represents an invocation from one microservice to another.
 
 ## Table of Contents
 
