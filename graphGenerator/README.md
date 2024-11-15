@@ -20,10 +20,12 @@ The generator produces microservice trace data by reading from four input files,
   - `numpy`
   - `pandas`
   - `scipy`
+  - `queue`
+  - `matplotlib`
 
 Install the necessary libraries with:
 ```bash
-pip3 install numpy pandas scipy
+pip3 install numpy pandas scipy queue matplotlib
 ```
 
 ## Running the Generator
